@@ -7,7 +7,7 @@ const location = {
     lng: 89.864194
 }
 
-const Direction = () => {
+const Direction = ({origin, destination}) => {
 
     const [response, setResponse] = useState(null);
 
@@ -38,8 +38,8 @@ const Direction = () => {
                     <DirectionsService
                         // required
                         options={{
-                            destination: "Jamalpur",
-                            origin: "Sarishabari",
+                            destination: destination,
+                            origin: origin,
                             travelMode: "WALKING"
                         }}
                         // required
